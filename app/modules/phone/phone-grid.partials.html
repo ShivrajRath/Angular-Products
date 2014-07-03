@@ -1,0 +1,26 @@
+<h3>Best selling phones</h3>
+<div class="container">
+    <div class="row">
+        Search:
+        <input type="text" ng-model="query">
+    </div>
+    <div class="row">
+        Sort by - <a href="#" ng-click="sort('name')">Alphabetically</a> | <a href="#" ng-click="sort('ratings')">Ratings</a>
+    </div>
+    <div class="row">
+        <div class="col-xs-3" ng-repeat="phone in model.products | filter:query | orderBy:sortkey">
+            <div class="col-xs-12"> <a href="#/products/phones/{{phone.phoneId}}">{{phone.name}}</a>
+            </div>
+            <div class="col-xs-12">{{phone.brand}}</div>
+            <div class="col-xs-12">
+                Compare
+                <input type="checkbox" value="{{phone.phoneId}}" ng-model="comparephone" ng-change="changeCompare(phone)" ng-checked="{{phone.checked}}">
+            </div>
+            <div class="col-xs-12">
+                <a href="#/products/phones/{{phone.phoneId}}">
+                    <img ng-src="{{phone.image}}" alt="{{phone.brand + phone.name}}">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
