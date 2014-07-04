@@ -4,15 +4,24 @@
  */
 var planModule = angular.module('plan', []);
 
-planModule.controller('PlanGridController', ['$scope', '$http',
-    function($scope, $http) {
+planModule.controller('PlanGridController', ['$scope', '$http','$rootScope','planModel',
+    function($scope, $http, $rootScope, planModel) {
 
         $scope.sort = function(key) {
             $scope.sortkey = key;
         };
 
-        $http.get('json/plans.json').success(function(data) {
-            $scope.model = data;
+        $scope.model = planModel.model;
+
+        /**
+         * Event listeners
+         */
+        $scope.$on('planModelLoad', function(event, model) {
+            $scope.model = model;
         });
+
+        $scope.selectPlan = function(planId) {
+            $rootScope.$broadcast('selectPlan', planId);
+        };
     }
 ]);

@@ -9,7 +9,7 @@
             <br>
             <div>{{plan.features[0]}}</div>
             <div>
-                <input type="radio" name="choosePlan" value=plan_{{plan.price}}>Choose this Plan
+                <input type="radio" name="choosePlan" value=plan_{{plan.price}} ng-click="selectPlan(planId)" ng-checked="{{plan.isSelected}}">Choose this Plan
             </div>
             <div>
                 <a href="#/products/plans/{{planId}}"> More details </a>

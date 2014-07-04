@@ -3,8 +3,8 @@
  */
 var phoneModule = angular.module('phone', []);
 
-phoneModule.controller('PhoneGridController', ['$scope', '$http',
-    function($scope, $http) {
+phoneModule.controller('PhoneGridController', ['$scope', '$http', '$rootScope', 'phoneModel',
+    function($scope, $http, $rootScope, phoneModel) {
 
         $scope.sort = function(key) {
             $scope.sortkey = key;
@@ -14,8 +14,14 @@ phoneModule.controller('PhoneGridController', ['$scope', '$http',
             phone.checked = !phone.checked;
         };
 
-        $http.get('json/phones.json').success(function(data) {
-            $scope.model = data;
+        $scope.model = phoneModel.model;
+
+        /**
+         * Event listeners
+         */
+        $scope.$on('phoneModelLoad', function(event, model) {
+            $scope.model = model;
         });
+
     }
 ]);
