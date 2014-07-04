@@ -4,7 +4,7 @@
  * Trigger events based on model changes
  */
 
-serviceModule.service('phoneModel', ['$http', '$rootScope',
+angular.module('service', []).service('phoneModel', ['$http', '$rootScope',
     function($http, $rootScope) {
 
         var self = this;

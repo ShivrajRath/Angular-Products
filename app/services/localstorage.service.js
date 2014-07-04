@@ -1,4 +1,4 @@
-serviceModule.service('localstorageservice', [
+angular.module('service', []).service('localstorageservice', [
     function() {
         /**
          * This module contains all library function for localstorage usage

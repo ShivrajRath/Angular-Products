@@ -1,4 +1,4 @@
-serviceModule.service('planModel', ['$http', '$rootScope',
+angular.module('service', []).service('planModel', ['$http', '$rootScope',
     function($http, $rootScope) {
 
         var self = this;

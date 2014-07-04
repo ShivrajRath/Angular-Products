@@ -17,6 +17,7 @@
 ### References
 * Service as angular model: http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
 * Providers: https://docs.angularjs.org/guide/providers
+* Improved angular module: http://www.hiddentao.com/archives/2013/11/04/an-improved-angular-module-split-your-modules-into-multiple-files/
 
 ### To Read
 * Creating services- https://docs.angularjs.org/guide/services
