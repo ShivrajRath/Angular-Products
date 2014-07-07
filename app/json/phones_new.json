@@ -1,0 +1,88 @@
+{
+    "p001": {
+        "name": "Samsung Galaxy S 5",
+        "brand": "Samsung",
+        "upfrontprice": "0",
+        "promotion": "Now available in three colors!",
+        "features": {
+            "weight": "5.11 ounces",
+            "memory": "2GB RAM, 16GB ROM, 128GB Expandable Memory Slot",
+            "battery": "2800 mAh",
+            "talktime": "Up to 29 hours"
+        },
+        "filters": [
+            "deals",
+            "topsellers",
+            "webexclusive"
+        ],
+        "image": "http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/samsung-galaxy-s-5/all/stills/browse-samsung-galaxy-s-5-all.jpg/jcr:content/renditions/cq5dam.web.280.280.jpeg",
+        "reviews": [
+            "The Next Big Thing Is Here. Stunning. Innovative. Simply inspired. The Samsung Galaxy S® 5 is technology that truly impacts your life. Make split-second moments yours. Watch HD movies and games roar to life. Track your life right down to your heartbeat."
+        ],
+        "ratings": "4.5",
+        "checked": false
+    },
+    "p002": {
+        "name": "LG G2",
+        "brand": "LG",
+        "upfrontprice": "0",
+        "promotion": "FREE Case & Screen Protector valued at $80!",
+        "features": {
+            "weight": "5.04 ounces",
+            "memory": "2GB and 32GB ROM",
+            "battery": "3,000 mAh SiO+ battery / embedded",
+            "talktime": "26.5 hours (3G)"
+        },
+        "filters": [
+            "deals"
+        ],
+        "image": "http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/lg-g2/all/stills/browse-lg-g2-all.jpg/jcr:content/renditions/cq5dam.web.280.280.jpeg",
+        "reviews": [
+            "The screen on this phone is beautiful. It is large and crisp but doesn't feel so bulky even with a tough case. I do mostly texting on the phone so I use the keyboard a lot and that's the only fault I can say this phone has for now. The home button is placed right under the space button which means if your typing quickly you will inevitably hit the home button at some time. I've always had an iPhone so this was never a problem so I would say other than that this phone is great. Battery last all day, I've had this phone for about a mouth and it has NEVER died on me like my iPhone would constantly do. Games are also awesome on this. It has unique features that I wouldn't say are great but they work. If they find a way to hide the bottom home screen while typing it will be great or else I would definitely go back to Apple when the new iPhone 6 comes out. The speakers are similar to those of the iPhone which I'm used to so I don't complain and the camera is great on this phone. Don't take much pictures but the ones I have came out really good."
+        ],
+        "ratings": "4.3",
+        "checked": false
+    },
+    "p003": {
+        "name": "Google Nexus 5",
+        "brand": "LG",
+        "upfrontprice": "0",
+        "features": {
+            "weight": "4.5 ounces",
+            "memory": "16GB ROM, 2GB RAM",
+            "battery": "2300 mAh Li-Ion",
+            "talktime": "17 hours"
+        },
+        "filters": [
+            "topsellers",
+            "webexclusive"
+        ],
+        "image": "http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/google-nexus-5/all/stills/browse-google-nexus-5-all.jpg/jcr:content/renditions/cq5dam.web.280.280.jpeg",
+        "reviews": [
+            "The screen on this phone is beautiful. It is large and crisp but doesn't feel so bulky even with a tough case. I do mostly texting on the phone so I use the keyboard a lot and that's the only fault I can say this phone has for now. The home button is placed right under the space button which means if your typing quickly you will inevitably hit the home button at some time. I've always had an iPhone so this was never a problem so I would say other than that this phone is great. Battery last all day, I've had this phone for about a mouth and it has NEVER died on me like my iPhone would constantly do. Games are also awesome on this. It has unique features that I wouldn't say are great but they work. If they find a way to hide the bottom home screen while typing it will be great or else I would definitely go back to Apple when the new iPhone 6 comes out. The speakers are similar to those of the iPhone which I'm used to so I don't complain and the camera is great on this phone. Don't take much pictures but the ones I have came out really good."
+        ],
+        "ratings": "4.7",
+        "checked": false
+    },
+    "p004": {
+        "name": "Samsung Galaxy Note 3",
+        "brand": "Samsung",
+        "upfrontprice": "10",
+        "features": {
+            "weight": "5.93 ounces",
+            "memory": "3GB RAM, 32GB ROM and microSD slot (up to 64 GB)",
+            "battery": "3200 mAh battery",
+            "talktime": "Up to 25 hours"
+        },
+        "filters": [
+            "deals",
+            "webexclusive"
+        ],
+        "image": "http://s.tmocache.com/content/dam/tmo/en-p/cell-phones/samsung-galaxy-note-3/all/stills/browse-samsung-galaxy-note-3-all.jpg/jcr:content/renditions/cq5dam.web.280.280.jpeg",
+        "reviews": [
+            "The screen on this phone is beautiful. It is large and crisp but doesn't feel so bulky even with a tough case. I do mostly texting on the phone so I use the keyboard a lot and that's the only fault I can say this phone has for now. The home button is placed right under the space button which means if your typing quickly you will inevitably hit the home button at some time. I've always had an iPhone so this was never a problem so I would say other than that this phone is great. Battery last all day, I've had this phone for about a mouth and it has NEVER died on me like my iPhone would constantly do. Games are also awesome on this. It has unique features that I wouldn't say are great but they work. If they find a way to hide the bottom home screen while typing it will be great or else I would definitely go back to Apple when the new iPhone 6 comes out. The speakers are similar to those of the iPhone which I'm used to so I don't complain and the camera is great on this phone. Don't take much pictures but the ones I have came out really good."
+        ],
+        "ratings": "3.9",
+        "checked": false
+    }
+}

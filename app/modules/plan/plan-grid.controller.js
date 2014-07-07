@@ -23,5 +23,12 @@ planModule.controller('PlanGridController', ['$scope', '$http','$rootScope','pla
         $scope.selectPlan = function(planId) {
             $rootScope.$broadcast('selectPlan', planId);
         };
+
+        /**
+         * Detect model change push back changes
+         */
+        $scope.$watch('model', function(newVal, oldVal) {
+            $rootScope.$broadcast("planModelSync", newVal);
+        }, true);
     }
 ]);

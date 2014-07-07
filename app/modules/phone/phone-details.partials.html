@@ -1,5 +1,37 @@
-<div ng-controller="PhoneDetailsController">
-    <div class="container">
-        {{phoneId}}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <img ng-src="{{phone.image}}" alt="{{phone.brand + phone.name}}">
+            <div>
+                <br><a href="#/products"> View all Products </a>
+                <br>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <h2>{{phone.name}}</h2>
+            <br>
+            <em>{{phone.promotion}}</em>
+            <h3>Features</h3>
+
+            <div ng-repeat="(featureName, featureValue) in phone.features">
+                <div><b>{{featureName}}</b>
+                </div>
+                <div>{{featureValue}}</div>
+            </div>
+            <br>
+
+            <div><b>Ratings : </b>
+            </div>
+            <div>{{phone.ratings}}</div>
+
+            <div><b>Reviews : </b>
+            </div>
+            <div>
+                <div ng-repeat="review in phone.reviews">{{review}}
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

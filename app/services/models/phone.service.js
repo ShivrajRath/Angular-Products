@@ -3,14 +3,13 @@
  * Keep the model always synced.
  * Trigger events based on model changes
  */
-
 angular.module('service', []).service('phoneModel', ['$http', '$rootScope',
     function($http, $rootScope) {
 
         var self = this;
 
         $http.get('json/phones.json').success(function(data) {
-            self.model = data;
+            self.model = data && data.products;
             $rootScope.$broadcast('phoneModelLoad', self.model);
         });
     }

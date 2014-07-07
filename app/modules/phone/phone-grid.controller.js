@@ -22,6 +22,5 @@ phoneModule.controller('PhoneGridController', ['$scope', '$http', '$rootScope', 
         $scope.$on('phoneModelLoad', function(event, model) {
             $scope.model = model;
         });
-
     }
 ]);
