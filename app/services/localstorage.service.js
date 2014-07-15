@@ -3,7 +3,7 @@ angular.module('service', []).service('localstorageservice', [
         /**
          * This module contains all library function for localstorage usage
          */
-        this.storage = {
+        this.methods = {
 
             /**
              * Checks if localstorage is supported on the current browser
@@ -32,11 +32,18 @@ angular.module('service', []).service('localstorageservice', [
 
                         for (key in keys) {
                             if (keys.hasOwnProperty(key)) {
-                                localStorage.setItem(key, keys[key]);
+                                var value = key[key];
+                                if (typeof value === "object") {
+                                    value = JSON.stringify(value);
+                                }
+                                localStorage.setItem(key, value);
                             }
                         }
 
                     } else {
+                        if (typeof value === "object") {
+                            value = JSON.stringify(value);
+                        }
                         localStorage.setItem(key, value);
                     }
                     return true;

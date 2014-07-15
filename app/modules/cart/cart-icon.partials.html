@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="row">
+        Your cart currently contains
+        <span class="itemCount">{{(phoneModel|filterListOnCondition:phoneModel:'addedToCart':true).length}}</span>&nbsp;Item<span ng-if="(phoneModel|filterListOnCondition:phoneModel:'addedToCart':true).length > 1">s</span>
+    </div>
+</div>

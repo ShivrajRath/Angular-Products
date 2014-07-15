@@ -1,42 +1,48 @@
 {
-    "pl001": {
-        "name": "$ 50 per month",
-        "currency": "$",
-        "price": "50",
-        "features": [
-            "Unlimited talk, text & data while on our network",
-            "Up to 1 GB of 4G LTE data (Speeds reduced after 1 GB)",
-            "Unlimited data & text in 120+ countries & destinations"
-        ]
-    },
-    "pl002": {
-        "name": "$ 60 per month",
-        "currency": "$",
-        "price": "60",
-        "features": [
-            "Up to 3 GB of 4G LTE data (Speeds reduced after 3 GB)",
-            "Unlimited talk, text & data while on our network",
-            "Unlimited data & text in 120+ countries & destinations"
-        ]
-    },
-    "pl003": {
-        "name": "$ 70 per month",
-        "currency": "$",
-        "price": "70",
-        "features": [
-            "Up to 5 GB of 4G LTE data (Speeds reduced after 5 GB)",
-            "Unlimited talk, text & data while on our network",
-            "Unlimited data & text in 120+ countries & destinations"
-        ]
-    },
-    "pl004": {
-        "name": "$ 80 per month",
-        "currency": "$",
-        "price": "80",
-        "features": [
-            "Unlimited 4G LTE data",
-            "Unlimited talk, text & data while on our network",
-            "Unlimited data & text in 120+ countries & destinations"
-        ]
-    }
+    "products": [
+        {
+            "planId": "pl001",
+            "name": "$ 50 per month",
+            "currency": "$",
+            "price": "50",
+            "features": [
+                "Unlimited talk, text & data while on our network",
+                "Up to 1 GB of 4G LTE data (Speeds reduced after 1 GB)",
+                "Unlimited data & text in 120+ countries & destinations"
+            ]
+        },
+        {
+            "planId": "pl002",
+            "name": "$ 60 per month",
+            "currency": "$",
+            "price": "60",
+            "features": [
+                "Up to 3 GB of 4G LTE data (Speeds reduced after 3 GB)",
+                "Unlimited talk, text & data while on our network",
+                "Unlimited data & text in 120+ countries & destinations"
+            ]
+        },
+        {
+            "planId": "pl003",
+            "name": "$ 70 per month",
+            "currency": "$",
+            "price": "70",
+            "features": [
+                "Up to 5 GB of 4G LTE data (Speeds reduced after 5 GB)",
+                "Unlimited talk, text & data while on our network",
+                "Unlimited data & text in 120+ countries & destinations"
+            ]
+        },
+        {
+            "planId": "pl004",
+            "name": "$ 80 per month",
+            "currency": "$",
+            "price": "80",
+            "features": [
+                "Unlimited 4G LTE data",
+                "Unlimited talk, text & data while on our network",
+                "Unlimited data & text in 120+ countries & destinations"
+            ]
+        }
+    ]
 }

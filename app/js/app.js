@@ -40,7 +40,9 @@
 /* Application global module*/
 var app = angular.module('angularProductApp', [
     'ngRoute',
+    'filters',
     'service',
     'phone',
-    'plan'
+    'plan',
+    'cart'
 ]);

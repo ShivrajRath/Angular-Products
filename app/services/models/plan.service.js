@@ -1,22 +1,45 @@
-angular.module('service', []).service('planModel', ['$http', '$rootScope',
-    function($http, $rootScope) {
+angular.module('service', []).service('planModel', ['$http', '$rootScope', 'localstorageservice',
+    function($http, $rootScope, localstorageservice) {
 
         var self = this;
 
-        $http.get('json/plans.json').success(function(data) {
-            self.model = data;
-            $rootScope.$broadcast('planModelLoad', self.model);
-        });
+        /**
+         * If plan model is present in localstorage, pick it from there
+         */
 
-        $rootScope.$on('selectPlan', function(event, planId) {
-            angular.forEach(self.model, function(plan, key) {
-                if (key === planId) {
-                	plan.isSelected = true;
-                } else {
-                    plan.isSelected = false;
-                }
+        if (localstorageservice.methods.isKey('planModel')) {
+            self.model = JSON.parse(localstorageservice.methods.get('planModel'));
+            $rootScope.planModel = self.model;
+        } else {
+            $http.get('json/plans.json').success(function(data) {
+                self.model = data.products;
+                $rootScope.planModel = self.model;
+
+                /**
+                 * Set the model to localstorage
+                 */
+                localstorageservice.methods.set('planModel', self.model);
             });
-            self.model[planId].isSelected = true;
-        });
+        }
+
+        $rootScope.$watch("planModel", function(model) {
+            if (model && model.length) {
+                localstorageservice.methods.set('planModel', self.model);
+            }
+        }, true);
+
+        /**
+         * Model CRUD Properties
+         */
+
+        var proto = Object.getPrototypeOf(this);
+
+        proto.selectPlan = function(plan) {
+            angular.forEach(self.model, function(value, key) {
+                value.isSelected = false;
+            }, this);
+
+            plan.isSelected = !plan.isSelected;
+        }
     }
 ]);

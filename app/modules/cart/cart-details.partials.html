@@ -1,0 +1,26 @@
+<br>
+<br>
+<a href="#/products"> View all Products </a>
+
+<h2>
+    The following items are in your cart
+</h2>
+
+<div>
+    <div class="container" ng-repeat="phone in phoneModel | filter:{addedToCart:true}">
+        <div class="col-xs-3">
+            <a href="#/products/phones/{{phone.phoneId}}">
+                <img ng-src="{{phone.image}}" alt="{{phone.brand + phone.name}}">
+            </a>
+        </div>
+        <div class="col-xs-9">
+            <div>{{phone.name}}</div>
+            <div>Upfront Price: {{phone.upfrontprice}}</div>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="" class="btn btn-primary">Checkout</a>
+        <br>
+        <br>
+    </div>
+</div>

@@ -3,24 +3,16 @@
  */
 var phoneModule = angular.module('phone', []);
 
-phoneModule.controller('PhoneGridController', ['$scope', '$http', '$rootScope', 'phoneModel',
-    function($scope, $http, $rootScope, phoneModel) {
+phoneModule.controller('PhoneGridController', ['$scope', 'phoneModel',
+    function($scope, phoneModel) {
 
         $scope.sort = function(key) {
             $scope.sortkey = key;
         };
 
-        $scope.changeCompare = function(phone) {
-            phone.checked = !phone.checked;
+        $scope.changeCart = function(phone) {
+            // phone.addedToCart = !phone.addedToCart;
+            phoneModel.changeCart(phone);
         };
-
-        $scope.model = phoneModel.model;
-
-        /**
-         * Event listeners
-         */
-        $scope.$on('phoneModelLoad', function(event, model) {
-            $scope.model = model;
-        });
     }
 ]);

@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row">
+<div class="container" ng-repeat="phone in phoneModel">
+    <div class="row" ng-if="phone.phoneId === phoneId">
         <div class="col-xs-6">
             <img ng-src="{{phone.image}}" alt="{{phone.brand + phone.name}}">
             <div>

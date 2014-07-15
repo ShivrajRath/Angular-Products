@@ -8,19 +8,34 @@
         Sort by - <a href="#" ng-click="sort('name')">Alphabetically</a> | <a href="#" ng-click="sort('ratings')">Ratings</a>
     </div>
     <div class="row">
-        <div class="col-xs-3" ng-repeat="phone in model | filter:query | orderBy:sortkey">
-            <div class="col-xs-12"> <a href="#/products/phones/{{phone.phoneId}}">{{phone.name}}</a>
-            </div>
-            <div class="col-xs-12">{{phone.brand}}</div>
-            <div class="col-xs-12">
-                Compare
-                <input type="checkbox" value="{{phone.phoneId}}" ng-model="comparephone" ng-change="changeCompare(phone)" ng-checked="{{phone.checked}}">
+        <div class="col-xs-3" ng-repeat="phone in phoneModel | filter:query | orderBy:sortkey">
+            <br>
+            <br>
+            <div>
+                <div class="col-xs-12"> <a href="#/products/phones/{{phone.phoneId}}">{{phone.name}}</a>
+                </div>
+                <div class="col-xs-12">{{phone.brand}}</div>
+                <div class="col-xs-12">
+                    Compare
+                    <input type="checkbox" value="{{phone.phoneId}}" ng-model="comparephone" ng-change="changeCompare(phone)" ng-checked="{{phone.checked}}">
+                </div>
             </div>
             <div class="col-xs-12">
                 <a href="#/products/phones/{{phone.phoneId}}">
                     <img ng-src="{{phone.image}}" alt="{{phone.brand + phone.name}}">
                 </a>
+                <div class="text-center">
+                    Add to cart -
+                    <input type="checkbox" value="{{phone.phoneId}}" ng-model="cartAdd" ng-change="changeCart(phone)" ng-checked="{{phone.addedToCart}}">
+                </div>
             </div>
+        </div>
+
+        <div class="col-xs-12 text-center">
+            <br>
+            <br>
+            <br>
+            <a href="#/cart" class="btn btn-primary">View Cart</a>
         </div>
     </div>
 </div>
