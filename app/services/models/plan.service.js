@@ -1,5 +1,5 @@
-angular.module('service', []).service('planModel', ['$http', '$rootScope', 'localstorageservice',
-    function($http, $rootScope, localstorageservice) {
+angular.module('service', []).service('planService', ['$http', '$rootScope', 'localstorageservice', '$timeout',
+    function($http, $rootScope, localstorageservice, $timeout) {
 
         var self = this;
 
@@ -8,25 +8,39 @@ angular.module('service', []).service('planModel', ['$http', '$rootScope', 'loca
          */
 
         if (localstorageservice.methods.isKey('planModel')) {
-            self.model = JSON.parse(localstorageservice.methods.get('planModel'));
-            $rootScope.planModel = self.model;
+            $rootScope.planModel = JSON.parse(localstorageservice.methods.get('planModel'));
         } else {
             $http.get('json/plans.json').success(function(data) {
-                self.model = data.products;
-                $rootScope.planModel = self.model;
+                $rootScope.planModel = data.products;
 
                 /**
                  * Set the model to localstorage
                  */
-                localstorageservice.methods.set('planModel', self.model);
+                localstorageservice.methods.set('planModel', $rootScope.planModel);
             });
         }
 
         $rootScope.$watch("planModel", function(model) {
             if (model && model.length) {
-                localstorageservice.methods.set('planModel', self.model);
+                localstorageservice.methods.set('planModel', $rootScope.planModel);
             }
         }, true);
+
+        /**
+         * Resetting the model when localstorage changes
+         */
+        window.addEventListener('storage', function(event) {
+            if (event.key == 'planModel') {
+                $rootScope.planModel = JSON.parse(event.newValue);
+                /**
+                 * Updates the data to view bindings on other tabs
+                 */
+
+                $rootScope.$apply(function() {
+                    // This is to avoid scope apply to throw errors
+                });
+            }
+        }, false);
 
         /**
          * Model CRUD Properties
@@ -35,7 +49,7 @@ angular.module('service', []).service('planModel', ['$http', '$rootScope', 'loca
         var proto = Object.getPrototypeOf(this);
 
         proto.selectPlan = function(plan) {
-            angular.forEach(self.model, function(value, key) {
+            angular.forEach($rootScope.planModel, function(value, key) {
                 value.isSelected = false;
             }, this);
 

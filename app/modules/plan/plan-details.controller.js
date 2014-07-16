@@ -1,11 +1,11 @@
 var planModule = angular.module('plan', []);
 
-planModule.controller('PlanDetailsController', ['$scope', '$routeParams', 'planModel',
-    function($scope, $routeParams, planModel) {
+planModule.controller('PlanDetailsController', ['$scope', '$routeParams', 'planService',
+    function($scope, $routeParams, planService) {
         $scope.planId = $routeParams.planId;
 
         $scope.selectPlan = function(plan) {
-            planModel.selectPlan(plan);
+            planService.selectPlan(plan);
         };
     }
 ]);

@@ -3,16 +3,15 @@
  */
 var phoneModule = angular.module('phone', []);
 
-phoneModule.controller('PhoneGridController', ['$scope', 'phoneModel',
-    function($scope, phoneModel) {
+phoneModule.controller('PhoneGridController', ['$scope', 'phoneService',
+    function($scope, phoneService) {
 
         $scope.sort = function(key) {
             $scope.sortkey = key;
         };
 
         $scope.changeCart = function(phone) {
-            // phone.addedToCart = !phone.addedToCart;
-            phoneModel.changeCart(phone);
+            phoneService.changeCart(phone);
         };
     }
 ]);

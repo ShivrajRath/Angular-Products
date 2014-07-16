@@ -4,10 +4,10 @@
  */
 var planModule = angular.module('plan', []);
 
-planModule.controller('PlanGridController', ['$scope', 'planModel',
-    function($scope, planModel) {
+planModule.controller('PlanGridController', ['$scope', 'planService',
+    function($scope, planService) {
         $scope.selectPlan = function(plan) {
-        	planModel.selectPlan(plan);
+        	planService.selectPlan(plan);
         };
     }
 ]);
