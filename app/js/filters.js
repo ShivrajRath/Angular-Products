@@ -15,12 +15,12 @@ filterGroup.filter('filterListOnCondition', function() {
 /**
  * Returns filtered array based on presence of a string inside an array attribute of an array
  */
-filterGroup.filter('filterByChildArrayEls', function() {
-    return function(array, tag, arrayEls) {
-        if (arrayEls) {
-            if (typeof arrayEls === 'string') {
+filterGroup.filter('filterByChildArrayEl', function() {
+    return function(array, tag, filterStr) {
+        if (filterStr) {
+            if (typeof filterStr === 'string') {
                 return _.filter(array, function(arrayEl) {
-                    return _.contains(arrayEl[tag], arrayEls);
+                    return _.contains(arrayEl[tag], filterStr);
                 });
             }
         } else {

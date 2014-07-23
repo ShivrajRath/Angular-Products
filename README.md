@@ -20,6 +20,7 @@
 * Angular Service exposes model (on rootscope) and model CRUD operators. This is like collection in Backbone.
 * Remove the need for controllers, if views are directly referring to models on rootscope
 * Local storage events to update views across tabs/windows
+* Custom filtering
 
 ### References
 * Service as angular model: http://joelhooks.com/blog/2013/04/24/modeling-data-and-state-in-your-angularjs-application/
@@ -61,8 +62,6 @@
 ## Functionality
 * Product Grid
 	* Shows phone as well as accessories details
-	* Can sort based on price, rating
-	* Can see refurbished, top seller
 * Compare functionality
 * Add plans to cart
 * Remove from cart details page

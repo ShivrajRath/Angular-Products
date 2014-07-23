@@ -27,7 +27,7 @@ phoneModule.controller('PhoneGridController', ['$scope', 'phoneService', '$filte
         $scope.filter = function(event, expression) {
             event.preventDefault();
             $scope.phones = allPhones;
-            $scope.phones = $filter('filterByChildArrayEls')($scope.phones, 'filters', expression);
+            $scope.phones = $filter('filterByChildArrayEl')($scope.phones, 'filters', expression);
         };
     }
 ]);
