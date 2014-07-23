@@ -40,7 +40,6 @@
 
 ### To Think/Do
 * How to avoid long list of js inclusion on index.html page. Can js come with their views.
-* http://amitavroy.com/justread/content/articles/html5-local-storage-angular-js
 * Closure around all JS
 * Caching of 
 	- Desktop & mobile views
@@ -48,9 +47,22 @@
 * Custom directives, filters
 * Require.JS to avoid long list of JS inclusion
 * Default values in model
-* Change plan on plan details, it should refect in plan grid
+* Offline
+	- Add 5 product details pages from t-mobile.com
+	- Check the payload
+	- Add it to manifest
+	- Check the payload again
+	- Modify the manifest to download changes
+* RequireJS modules
+* Jasmine test cases
+* Clearing cache
+* Web workers to compare the model in background and update
 
 ## Functionality
+* Product Grid
+	* Shows phone as well as accessories details
+	* Can sort based on price, rating
+	* Can see refurbished, top seller
 * Compare functionality
 * Add plans to cart
 * Remove from cart details page

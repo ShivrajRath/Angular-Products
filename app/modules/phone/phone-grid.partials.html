@@ -1,14 +1,19 @@
 <h3>Best selling phones</h3>
 <div class="container">
-    <div class="row">
-        Search:
-        <input type="text" ng-model="query">
+    <div class="row mt20">
+        <b>Sort by -</b>  <a href="#" ng-click="order($event,'-ratings', false)">Ratings</a>
+    </div>
+    <div class="row mt20">
+        <b>Filter by - </b>
+        <a href="#" ng-click="filter($event,'')">All</a> |
+        <a href="#" ng-click="filter($event,'topsellers')">Top seller</a> |
+        <a href="#" ng-click="filter($event,'refurbished')">Refurbished</a> |
+        <a href="#" ng-click="filter($event,'new')">New</a> |
+        <a href="#" ng-click="filter($event,'greatdeals')">Great Deals</a> |
+        <a href="#" ng-click="filter($event,'webexclusive')">Web Exclusive</a>
     </div>
     <div class="row">
-        Sort by - <a href="#" ng-click="sort('name')">Alphabetically</a> | <a href="#" ng-click="sort('ratings')">Ratings</a>
-    </div>
-    <div class="row">
-        <div class="col-xs-3" ng-repeat="phone in phoneModel | filter:query | orderBy:sortkey">
+        <div class="col-xs-3" ng-repeat="phone in phones">
             <br>
             <br>
             <div>
